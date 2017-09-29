@@ -1,0 +1,79 @@
+<!DOCTYPE html>	
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<title>Klassen Scanner</title>
+</head>
+<body>
+
+	<h1>Klassen Scanner</h1>
+	
+	<div class="topnav">
+  <a href="file:///C:/Users/Administrator/Documents/javamapp/html/ScannerPage.html">Startsida</a>
+  <a href="file:///C:/Users/Administrator/Documents/javamapp/html/ScannerPage2.html">Tillämpning</a>
+  <a href="file:///C:/Users/Administrator/Documents/javamapp/html/ScannerPage3.html">Hur man använder metoder</a>
+  
+</div>
+	
+	<h2> Hur man använder metoder </h2>
+	<p><p>Säg att du har följande rad kod i ditt program:</p>
+
+<br>
+<p>Scanner läs = new Scanner(”Reg Bil: ABC 123”); </p>
+<br>
+
+<p>För att förtydliga: Scannern läs är kopplad till en sträng bestående av en rad av totalt 4 tokens. Man skulle kunna säga att scannern ”ställer sin markör” i början av strängen.
+För att kolla om det finns en token att läsa in till höger om markören kan man skriva: </p>
+
+<br>
+<p>boolean finnsDetEnToken = läs.hasNext();</p>
+<br>
+
+<p>Variabeln finnsDetEnToken får värdet true om det finns en token, vilket det ju gör, nämligen ordet Reg. För att hämta ut Reg som sträng kan man skriva: </p>
+<br>
+
+<p>Sträng ord1 = läs.next();</p>
+
+<br>
+<p>Variabeln ord1 får då värdet ”Reg”. För att läsa nästa ord skriver man: </p>
+<br>
+
+<p>Sträng ord2 = läs.next();</p>
+<br>
+
+<p>Variabeln ord2 får då värdet ”Bil:”. För att läsa ut bokstäverna i registreringsnumret:</p>
+<br>
+
+<p>Sträng regBokstäver = läs.next();</p>
+<br>
+
+<p>Variabeln regBokstäver får värdet ”ABC”. Nu är markören framför ”123”. Den kan läsas av som en sträng, men ännu lämpligare som ett heltal av typen int. För att kontrollera om nästa token är ett tal kan man skriva: </p>
+<br>
+
+<p>boolean ärDetEttTal = läs.hasNextInt();</p>
+<br>
+
+<p>Variabeln ärDetEttTal får i detta fall värdet true. För att läsa in talet till en variabeln av typen int kan man skriva: </p>
+
+<br>
+<p>int regNr = läs.nextInt();</p>
+
+<br>
+<p>För att kolla om det finns en till rad att läsa från, kan man skriva:</p>
+<br>
+<p>boolean finnsDetEnRadTill = läs.hasNextLine();</p>
+<br>
+
+<p>finnsDetEnRadTill får värdet false, då strängen enbart har en rad. Men vill man generera ett körningsfel kan man skriva…</p>
+<br>
+
+<p>String nästaRad = läs.nextLine();</p>
+<br>
+
+<p>.. för att försöka läsa ut nästkommande rad. Hade det funnits en rad hade den returnerats som en sträng till variabeln nästaRad. </p></p>
+<br>
+</body>
+</html>
+	
+	
+	
